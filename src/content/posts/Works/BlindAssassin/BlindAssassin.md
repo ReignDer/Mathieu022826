@@ -10,9 +10,9 @@ lang: ''
 ---
 
 # Gameplay
-<video width="100%" height = "auto" controls>
+<video width="50%" height = "auto" controls>
   <source src="/Mathieu022826/Files/Download.mp4" type="video/mp4">
-</video>>
+</video>
 
-Video Source: [Source](https://www.tiktok.com/@xx_blind_assassin_xx/video/7619949719309307157)
+> Video Source: [Source](https://www.tiktok.com/@xx_blind_assassin_xx/video/7619949719309307157)
 
