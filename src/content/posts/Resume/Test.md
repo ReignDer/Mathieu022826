@@ -8,5 +8,5 @@ category: Personal Information
 draft: false 
 lang: ''
 ---
-
+[CV_PDF_Download](/Files/resume.pdf)
 <a href = "/Files/resume.pdf" download="Mathieu_Pobre_Resume.pdf"> CV PDF Download </a>
