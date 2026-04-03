@@ -27,7 +27,7 @@ A 9-month game project with 9 team members. This game is a 3D puzzle platformer 
     - Recalibration of Raycast sensor to accomodate step-height ratio and layer validation for player grounded checking and walkable floors.
 - Achritectural Refactoring: Transitioned the monolithic codebase into a Component-Based Architecture, improving code readability, reuseability and better debugging.
 - Systems Architecture: Implemented a scalable Dialouge System and integrated dynamic UI frameworks for player feedback.
-- Technical Animation & Polish: Programmerd animation logic and triggered synchonized VFX/SFX events to enhance gameplay immersion.
+- Technical Animation & Polish: Programmed animation logic and triggered synchonized VFX/SFX events to enhance gameplay immersion.
 - Stability & QA: Led rigorous debugging and optimization to ensure polished and almost bug-free user experience
 - AI Architecture: Engineered a Finite-State-Machine in Level 3 to govern complex enemy and boss behaviour including, chasing, attacking, and tracking states.
 
