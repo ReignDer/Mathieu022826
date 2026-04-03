@@ -21,53 +21,110 @@ lang: ''
     - Updated the code to be compatible with Unity 6.3 new Renderer Pipline
 - Developed Core Gameplay Mechanics ensuring a accessible and responsive user experience.
 - Architected and programmed enemy AI behaviours using the GOAP system to provide dynamic gameplay loop.
+    - Data-Oriented GOAP using Scriptable Objects to simplify configuration in code.
+        ```yaml
+        protected virtual void SetupBeliefs()
+        {
+            beliefs = new Dictionary<string, AgentBeliefs>();
+            factory = new BeliefFactory(this, beliefs);
+            foreach (var belief in GOAPConfig.dynamicBeliefs)
+            {
+                factory.AddBelief(belief.beliefName, () =>
+                {
+                    bool result = belief.evaluator.Evaluate(blackboard);
+                    return belief.IsInversed ? !result : result;
+                });
+            }
+            foreach (var loc in blackboard.locationMap)
+            {
+                factory.AddLocationBelief(loc.conditionKey, 3f, loc.value);
+            }
+        }
+        protected virtual void SetupActions()
+        {
+            actions = new HashSet<AgentAction>();
+
+            foreach (var data in GOAPConfig.actionConditions)
+            {
+                var builder = new AgentAction.Builder(data.actionName)
+                    .WithStrategy(data.strategy.CreateStrategy(this))
+                    .WithCost(data.cost);
+
+                foreach (var preCon in data.preConditions)
+                {
+                    if (beliefs.ContainsKey(preCon))
+                        builder.AddPrecondition(beliefs[preCon]);
+                }
+
+                foreach (var effects in data.effects)
+                {
+                    if (beliefs.ContainsKey(effects))
+                        builder.AddEffects(beliefs[effects]);
+                }
+
+                actions.Add(builder.Build());
+            }
+        }
+        protected virtual void SetupGoals()
+        {
+            goals = new HashSet<AgentGoal>();
+
+            foreach (var goal in GOAPConfig.goalConditions)
+            {
+                goals.Add(new AgentGoal.Builder(goal.goalName)
+                    .WithPriority(goal.priorty)
+                    .WithDesiredEffects(beliefs[goal.desiredEffects])
+                    .Build());
+            }
+        }
+        ```
+
 - Engineered animation system using Unity's Animator to bridge the gap between art and code to streamline character transitions.
     - Quick Set-Up which sets the Hash code of the animation.
         ```yaml
-            public abstract class AnimationController : MonoBehaviour
+        public abstract class AnimationController : MonoBehaviour
+        {
+            private void Awake()
             {
-                private void Awake()
-                {
-                    animator = GetComponentInChildren<Animator>();
-                    SetLocomotionClip();
-                    SetAttackClip();
-                    SetAimClip();
-                    SetSpeedHashClip();
-                    SetReloadClip();
-                    SetDeathClip();
-                    SetGetHitClip();
-                }
+                animator = GetComponentInChildren<Animator>();
+                SetLocomotionClip();
+                SetAttackClip();
+                SetAimClip();
+                SetSpeedHashClip();
+                SetReloadClip();
+                SetDeathClip();
+                SetGetHitClip();
             }
+        }
         ```
     - Plays the Animation based on the clip's speed
         ```yaml
-            public abstract class AnimationController : MonoBehaviour
+        public abstract class AnimationController : MonoBehaviour
+        {
+            private void PlayAnimationUsingTimer(int clipHash)
             {
-                private void PlayAnimationUsingTimer(int clipHash)
-                {
-                    timer = new CountdownTimer(GetAnimationLength(clipHash));
-                    timer.OnTimerStart += () => animator.CrossFade(clipHash, k_crossFadeDuration);
-                    timer.OnTimerEnd += () => animator.CrossFade(locomotionClip, k_crossFadeDuration);
-                    timer.Start();
-                }
-                public float GetAnimationLength(int hash)
-                {
-                    if (clipLengths.TryGetValue(hash, out float length)) return length;
-
-                    foreach (AnimationClip animationClip in animator.runtimeAnimatorController.animationClips)
-                    {
-                        Debug.Log($"Name: {animationClip.name}");
-                        if(Animator.StringToHash(animationClip.name) == hash)
-                        {
-                            clipLengths[hash] = animationClip.length;
-                            return animationClip.length;
-                        }
-                    }
-
-                    return -1;
-                }
-
+                timer = new CountdownTimer(GetAnimationLength(clipHash));
+                timer.OnTimerStart += () => animator.CrossFade(clipHash, k_crossFadeDuration);
+                timer.OnTimerEnd += () => animator.CrossFade(locomotionClip, k_crossFadeDuration);
+                timer.Start();
             }
+            public float GetAnimationLength(int hash)
+            {
+                if (clipLengths.TryGetValue(hash, out float length)) return length;
+
+                foreach (AnimationClip animationClip in animator.runtimeAnimatorController.animationClips)
+                {
+                    Debug.Log($"Name: {animationClip.name}");
+                    if(Animator.StringToHash(animationClip.name) == hash)
+                    {
+                        clipLengths[hash] = animationClip.length;
+                        return animationClip.length;
+                    }
+                }
+
+                return -1;
+            }
+        }
         ```
 
 - Executed QA testing, identifying and resolving critical bugs to polish the final build.
