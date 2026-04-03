@@ -8,15 +8,14 @@ category: 'Works'
 draft: false 
 lang: ''
 ---
-
 # Images
 ![PokemonCenter1](./Pokemon1.png)
 ![PokemonCenter2](./Pokemon2.png)
 ![PokemonCenter3](./Pokemon3.png)
 # Role
-- Lighting
-- Post-Processing
-- Main Room Design
+- Environmental Lighting: Implemented baked lighting, reflection, emissions and skybox color to establish the mood and atmospheric tone of the Pokemon Center.
+- Post-Processing Stack: Configured custom bloom, chromatic aberration, depth of field, and color grading.
+- Level Design & Layout: Architected the Main Room geometry.
 
 # Source Code 
 > [Rendering Showcase](https://github.com/Seighn/RenderingShowcase)
