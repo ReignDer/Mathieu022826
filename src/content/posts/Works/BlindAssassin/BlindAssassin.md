@@ -24,5 +24,9 @@ lang: ''
 - Engineered animation system to bridge the gap between art and code to streamline character transitions.
 - Executed QA testing, identifying and resolving critical bugs to polish the final build.
 - Composed and produced original music of the game to enhance immersion.
+<audio controls style="width: 100%;">
+  <source src="/Mathieu022826/Files/Blind_Assassin_Theme.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 - Integrated SFX and musical triggers to ensure seamless audio-visual synchronization.
 - Implementing VFX to code to enhance visual appeal.
