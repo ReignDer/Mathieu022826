@@ -3,7 +3,7 @@ title: Shapeshifter
 published: 2026-04-03
 description: 'A 3D puzzle platformer game'
 image: './Poster.png'
-tags: [game Development, Unity, C#]
+tags: [Game Development, Unity, C#]
 category: 'Works'
 draft: false 
 lang: ''
