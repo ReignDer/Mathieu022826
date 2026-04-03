@@ -9,4 +9,4 @@ draft: false
 lang: ''
 ---
 
-<a href = "./resume.pdf" download="Mathieu_Pobre_Resume.pdf"> CV PDF Download </a>
+<a href = "/Files/resume.pdf" download="Mathieu_Pobre_Resume.pdf"> CV PDF Download </a>
