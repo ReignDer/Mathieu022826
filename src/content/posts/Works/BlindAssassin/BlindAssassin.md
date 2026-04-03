@@ -20,6 +20,11 @@ lang: ''
 - Developed and Updated the Full Screen Post-Process Scanner Shader inspired by the Odrabek Scanner in Death Stranding which was recreated in Unity by [Sichen Liu](https://80.lv/articles/recreating-death-stranding-odradek-terrain-scanner-in-unity)
     - Updated the code to be compatible with Unity 6.3 new Renderer Pipline
 - Developed Core Gameplay Mechanics ensuring a accessible and responsive user experience.
+    - Health System
+    - Damage System
+    - Weapon Logic
+    - Black Environment for blindness
+    - Scanner Shader
 - Architected and programmed enemy AI behaviours using the GOAP system to provide dynamic gameplay loop.
     - Data-Oriented GOAP using Scriptable Objects to simplify configuration in code.
         ```yaml
