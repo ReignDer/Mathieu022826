@@ -21,7 +21,55 @@ lang: ''
     - Updated the code to be compatible with Unity 6.3 new Renderer Pipline
 - Developed Core Gameplay Mechanics ensuring a accessible and responsive user experience.
 - Architected and programmed enemy AI behaviours using the GOAP system to provide dynamic gameplay loop.
-- Engineered animation system to bridge the gap between art and code to streamline character transitions.
+- Engineered animation system using Unity's Animator to bridge the gap between art and code to streamline character transitions.
+    - Quick Set-Up which sets the Hash code of the animation.
+        ```yaml
+            public abstract class AnimationController : MonoBehaviour
+            {
+                private void Awake()
+                {
+                    animator = GetComponentInChildren<Animator>();
+                    SetLocomotionClip();
+                    SetAttackClip();
+                    SetAimClip();
+                    SetSpeedHashClip();
+                    SetReloadClip();
+                    SetDeathClip();
+                    SetGetHitClip();
+                }
+            }
+        ```
+    - Plays the Animation based on the clip's speed
+        ```yaml
+            public abstract class AnimationController : MonoBehaviour
+            {
+                private void PlayAnimationUsingTimer(int clipHash)
+                {
+                    timer = new CountdownTimer(GetAnimationLength(clipHash));
+                    timer.OnTimerStart += () => animator.CrossFade(clipHash, k_crossFadeDuration);
+                    timer.OnTimerEnd += () => animator.CrossFade(locomotionClip, k_crossFadeDuration);
+                    timer.Start();
+                }
+                public float GetAnimationLength(int hash)
+                {
+                    if (clipLengths.TryGetValue(hash, out float length)) return length;
+
+                    foreach (AnimationClip animationClip in animator.runtimeAnimatorController.animationClips)
+                    {
+                        Debug.Log($"Name: {animationClip.name}");
+                        if(Animator.StringToHash(animationClip.name) == hash)
+                        {
+                            clipLengths[hash] = animationClip.length;
+                            return animationClip.length;
+                        }
+                    }
+
+                    return -1;
+                }
+
+            }
+        ```
+
 - Executed QA testing, identifying and resolving critical bugs to polish the final build.
 - Composed and produced original music of the game to enhance immersion.
     <audio controls style="width: 100%;">
