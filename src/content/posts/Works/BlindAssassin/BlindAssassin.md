@@ -2,7 +2,7 @@
 title: Blind Assassin
 published: 2026-04-03
 description: 'A FPS game where you are blind'
-image: './Works/BLIND_ASSASSIN_LOGO.png'
+image: './BLIND_ASSASSIN_LOGO.png'
 tags: [Game Development, C#, Unity]
 category: 'Works'
 draft: false 
