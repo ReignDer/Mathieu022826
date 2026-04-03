@@ -11,7 +11,7 @@ lang: ''
 
 # Gameplay
 <video width="100%" height = "auto" controls>
-  <source src="/Mathieu022826/Download.mp4" type="video/mp4">
+  <source src="/Mathieu022826/Files/Download.mp4" type="video/mp4">
 </video>>
 
 Video Source: [Source](https://www.tiktok.com/@xx_blind_assassin_xx/video/7619949719309307157)
