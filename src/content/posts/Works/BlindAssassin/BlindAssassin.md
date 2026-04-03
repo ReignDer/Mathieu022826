@@ -142,5 +142,7 @@ lang: ''
 - Integrated SFX and musical triggers to ensure seamless audio-visual synchronization.
 - Implementing VFX to code to enhance visual appeal.
 
+# Download Link
+> [Download Game](https://reignder.itch.io/blind-assassin/download/o10OyaPYDzD9Fg6DefoLxksxO2_TzJujHsUlxEsb)
 # Source Code
-[Blind Assassin](https://github.com/ReignDer/Project_Assassin)
+> [Blind Assassin](https://github.com/ReignDer/Project_Assassin)
