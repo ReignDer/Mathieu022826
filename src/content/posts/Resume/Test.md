@@ -8,6 +8,3 @@ category: Personal Information
 draft: false 
 lang: ''
 ---
-
-[CV_PDF_Download](/resume.pdf)
-
