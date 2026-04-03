@@ -9,4 +9,4 @@ draft: false
 lang: ''
 ---
 
-[CV_PDF_Download](./resume.pdf)
+<a href = "./resume.pdf" download="resume.pdf"> CV PDF Download </a>
