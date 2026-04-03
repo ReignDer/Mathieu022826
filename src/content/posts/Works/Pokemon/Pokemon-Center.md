@@ -1,5 +1,5 @@
 ---
-title: Modeling Pokemon Center using Pro-Builder
+title: Modeling Pokemon Center using Unity Pro-Builder
 published: 2026-04-03
 description: 'Rendering Showcase of a Pokemon Center'
 image: ''
