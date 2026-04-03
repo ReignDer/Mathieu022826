@@ -9,4 +9,4 @@ draft: false
 lang: ''
 ---
 
-[CV_PDF_Download](public/Files/resume.pdf)
+[CV_PDF_Download](./resume.pdf)
