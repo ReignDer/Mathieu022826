@@ -1,10 +1,10 @@
 ---
-title: Test
+title: Resume/CV
 published: 2026-02-28
-description: ''
+description: 'This is my CV'
 image: ''
-tags: []
-category: ''
+tags: [Resume, CV]
+category: Personal Information
 draft: false 
 lang: ''
 ---
