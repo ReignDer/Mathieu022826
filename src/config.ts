@@ -58,16 +58,16 @@ export const profileConfig: ProfileConfig = {
 	bio: "I am an aspiring Game Developer.",
 	links: [
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
+			name: "Itch-io",
+			icon: "fa6-brands:itch-io", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://twitter.com",
+			url: "https://reignder.itch.io",
 		},
 		{
 			name: "Steam",
 			icon: "fa6-brands:steam",
-			url: "https://store.steampowered.com",
+			url: "https://steamcommunity.com/profiles/76561199077788149/",
 		},
 		{
 			name: "GitHub",
