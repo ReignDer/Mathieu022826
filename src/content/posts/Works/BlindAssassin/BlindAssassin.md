@@ -10,5 +10,9 @@ lang: ''
 ---
 
 # Gameplay
-<iframe width="100%" height="468" src="https://www.tiktok.com/@xx_blind_assassin_xx/video/7619952717519424788" title="Blind Assassin Ver. 1.1.2 Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<video width="100%" controls>
+  <source src="./Download.mp4" type="video/mp4">
+</video>>
+
+Video Source: [Source](https://www.tiktok.com/@xx_blind_assassin_xx/video/7619949719309307157)
 
