@@ -13,7 +13,7 @@ A 9-month game project with 9 team members. This game is a 3D puzzle platformer 
 
 # Gameplay
 <video width="100%" height = "auto" controls>
-  <source src="/Mathieu022826/Files/Shapshifter.mp4" type="video/mp4">
+  <source src="/Mathieu022826/Files/Shapeshifter.mp4" type="video/mp4">
 </video>
 
 # Images
