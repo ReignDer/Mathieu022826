@@ -1,9 +1,7 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+My name is Mathieu Marc I. Pobre. I am 22 years old and currently studying at Dela Salle University Laguna earning a Bachelor of Science in Interactive Entertainment Major in Game Development and projected to graduate in August of 2027. My goal after graduation is to obtain a position as a game engineer to utilize my game programming background.
 
-::github{repo="saicaca/fuwari"}
+As a game developer, I strive to create immersive games that captivate players. This portfolio provides insights on my character,  programming background and technical skills in game development. This portfolio showcases my accomplishment and experiences from my journey in learning game development. 
 
 > ### Sources of images used in this site
 > - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
